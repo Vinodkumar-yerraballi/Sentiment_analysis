@@ -16,24 +16,8 @@ X=vector.fit_transform(X)
 model=LogisticRegression()
 model.fit(X,y)
 
-image3=Image.open('download.jpeg')
-
-def main():
-  st.title("Sentimental analysis")
-  st.markdown(
-        """
-        <style>
-            .reportview-container {background-color:Pink;}
-        </style>
-        """,
-        unsafe_allow_html=True)
-  st.markdown("""
-    <div style="background-color:Yellow;padding:10px">
-        <h2 style="color:Black;text-align:center;">Sentimental Analysis App </h2>
-    </div>
-    """, unsafe_allow_html=True)
-  st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
-  @st.cache(persist=True, show_spinner=False)
+#set background
+ @st.cache(persist=True, show_spinner=False)
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
@@ -51,6 +35,25 @@ def set_background(png_file):
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 set_background('annie-spratt-_VxyFCTEpW8-unsplash.png')
+
+image3=Image.open('download.jpeg')
+
+def main():
+  st.title("Sentimental analysis")
+  st.markdown(
+        """
+        <style>
+            .reportview-container {background-color:Pink;}
+        </style>
+        """,
+        unsafe_allow_html=True)
+  st.markdown("""
+    <div style="background-color:Yellow;padding:10px">
+        <h2 style="color:Black;text-align:center;">Sentimental Analysis App </h2>
+    </div>
+    """, unsafe_allow_html=True)
+  st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+ 
   user=st.text_area("Enter text hear:","Type hear")
   st.button("Predict")
   if len(user)<1:
