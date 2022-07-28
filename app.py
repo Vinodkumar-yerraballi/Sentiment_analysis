@@ -17,7 +17,7 @@ model=LogisticRegression()
 model.fit(X,y)
 
 #set background
- @st.cache(persist=True, show_spinner=False)
+@st.cache(persist=True, show_spinner=False)
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
