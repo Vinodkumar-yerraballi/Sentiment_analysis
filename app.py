@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from PIL import Image
+import base64
 
 
 data=pd.read_csv('Twitter_Data.csv')
