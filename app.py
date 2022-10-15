@@ -1,11 +1,11 @@
-import streamlit as st
-import numpy as np
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from PIL import Image
 import base64
 
+import numpy as np
+import pandas as pd
+import streamlit as st
+from PIL import Image
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
 
 data=pd.read_csv('Twitter_Data.csv')
 data.dropna(inplace=True)
@@ -60,7 +60,7 @@ def main():
   if len(user)<1:
       st.write(" ")
   else:
-    user=vector.transform([user]).toarray()
+    user=vector.transform([user]).toarray()  # type: ignore
     result=model.predict(user)
     if result ==[1.]:
       image=Image.open('images.jpeg')
