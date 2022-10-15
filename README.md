@@ -38,3 +38,10 @@ After that we used **Logisitc Regression** algorithms because it's classificatio
 # Deployement process
 
 Once the process is done then move to the model deployment. We use Streamlit for model deployment, We create a function for text data taken from the user and we predict the text is either spam or ham based on the data information. Once we deployed the model in the local host then we deployed the model in streamlit cloud.
+# Demo of the model 
+
+
+[Screencast from 10-15-2022 03:02:26 PM.webm](https://user-images.githubusercontent.com/98636972/195979526-ce0b2414-db9a-413f-942c-11350b588195.webm)
+
+
+
